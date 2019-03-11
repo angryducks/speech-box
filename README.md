@@ -26,17 +26,17 @@ git clone https://github.com/angryducks/speech-box
 ```
 3. Update API key
 
-Create Google Cloud Platform API key: https://console.cloud.google.com  
-Location: create `./speech-box/<your project ID>.json`  
-Change the json file name to `google-api.json`  
-
-Create rosette api key: https://www.rosette.com  
-Location: `./speech-box/entity.py`  
-key = 'Your rosette api key'    
-
-Email key:    
-Location: `./speech-box/main.py`  
-EMAIL_HOST_PASSWORD  
+	Create Google Cloud Platform API key: https://console.cloud.google.com  
+	Location: create `./speech-box/<your project ID>.json`  
+	Change the json file name to `google-api.json`  
+	
+	Create rosette api key: https://www.rosette.com  
+	Location: `./speech-box/entity.py`  
+	key = 'Your rosette api key'    
+	
+	Email key:    
+	Location: `./speech-box/main.py`  
+	EMAIL_HOST_PASSWORD  
 
 4. Run server on your own computer:
 ```
