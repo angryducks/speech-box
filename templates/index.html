@@ -1,0 +1,81 @@
+{% extends "theme.html" %}
+  {% block style %}
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+      <link rel="stylesheet" href="../static/css/styles.css">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+      <script type="text/javascript" src="../static/js/recorder.js"></script>
+      <script type="text/javascript" src="../static/js/aduck.js"></script>
+
+  {% endblock style %}
+
+  {% block content %}
+    <div id="app" class="container">
+      <h1>AI Speech Box</h1>
+      <p class="page-description">Speech to Text, Sentiment Analysis and Words Summary</p>
+      <div class="app">
+          <div>
+            <textarea class="recognized-text" id="note-textarea"
+                      placeholder="Create new notes by voice or keyboard input..."
+                      rows="6">当地时间2月25日,2019世界移动大会(MWC)在西班牙巴塞罗那正式开展。华为刚刚发布的首款5G折叠屏手机Mate X一经展出,便以全新折叠姿态、极速通信体验点燃全场,刷新全世界目光,成为5G时代新标杆。</textarea>
+          </div>
+
+         <div class="container-fluid text-center">
+           <div class="row">
+           <div class="col-md-6">
+            <form action="" method="post" enctype="multipart/form-data" >
+              <input type="file"  name="file" class="btn btn-light">
+              <input type =submit  value="upload" class="btn btn-light">
+            </form>
+          </div>
+
+             <div class="col-md-6">
+                <form action="/email" method="post" >
+                  <input type="email" class="form-control" name="em" id="em" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="submit" value="Set email" class='btn btn-light'>
+                </form>
+             </div>
+           </div>
+         </div>
+        <br>
+         <div class="container-fluid text-center">
+           <div class="col">
+             <div class="row-md-6">
+              <p class="center-responsive">
+                <a class="entities btn btn-danger text-white" @click="submit" role="button">Summary Now</a>
+                <a class="btn btn-dark text-white" href="./" role="button">Clear</a>
+              </p>
+             </div>
+             <div class="row-md-6">
+              <p class="center-responsive">
+                <a class="recorder btn btn-info text-white" role="button">Start Recording</a>
+                <a class="sentiment btn btn-warning text-white" @click="submit" role="button">Sentiment Now</a>
+              </p>
+             </div>
+
+            <p>
+            <img id="duck-img" >
+            </p>
+
+            <p>
+              <a href="https://github.com/nature1995/speech-box/blob/master/README.md" class="btn btn-light">README</a>
+            </p>
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+    {% endblock content %}
+
+  {% block scripts %}
+
+  {% endblock scripts %}
