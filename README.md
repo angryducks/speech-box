@@ -5,6 +5,10 @@
 </div>
 <br>
 
+[![python3.5](https://img.shields.io/badge/python-3.5-red.svg)]()
+[![python3.6](https://img.shields.io/badge/python-3.6-brightgreen.svg)]()
+[![python3.7](https://img.shields.io/badge/python-3.7-blue.svg)]()
+
 ## Introduction  
 This Flask web app can provide speech to text, sentiment analysis and words summary.
 
