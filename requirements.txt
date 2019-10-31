@@ -59,7 +59,7 @@ requests==2.18.4
 rsa==3.4.2
 six==1.11.0
 urllib3>=1.22
-Werkzeug==0.12.2
+Werkzeug==0.15.3
 gunicorn==19.7.1
 rosette_api
 flask_mail
